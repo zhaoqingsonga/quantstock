@@ -16,11 +16,11 @@
 #'
 #' @examples
 #' \dontrun{
-#' plot.stock("600048.SS")
+#' plot_stock("600048.SS")
 #' }
 #'
 #' @export
-plot.stock <- function(stockname = "600048.SS") {
+plot_stock <- function(stockname = "600048.SS") {
   # 获取股票数据
   ss001 <- getStocks(stock = stockname, start = "2020-01-01", end = Sys.Date())
 
