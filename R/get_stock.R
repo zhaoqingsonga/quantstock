@@ -23,7 +23,6 @@
 #' }
 #' @export
 getStocks <- function(stock_code, start_date = "2020-01-01", end_date = Sys.Date()) {
-  library(quantmod)
   stock_data <- getSymbols(stock_code, src = "yahoo", from = start_date, to = end_date, auto.assign = FALSE)
   names(stock_data)<-c("Open","High","Low","Close","Volume","Adjusted")
   return(stock_data)
